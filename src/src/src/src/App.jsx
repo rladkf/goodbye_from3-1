@@ -5,7 +5,14 @@ import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged }
 import { getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc, updateDoc, setDoc } from 'firebase/firestore';
 
 // 1. Firebase 초기화 (필수 규칙 준수)
-const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+  apiKey: "AIzaSyCyXMJcFrbSxLBq-6hdUcPiWbjeml8jSh0",
+  authDomain: "taerin-rolling-paper-24b34.firebaseapp.com",
+  projectId: "taerin-rolling-paper-24b34",
+  storageBucket: "taerin-rolling-paper-24b34.firebasestorage.app",
+  messagingSenderId: "33828777196",
+  appId: "1:33828777196:web:a784fe9accdad33c4409c9"
+};
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
